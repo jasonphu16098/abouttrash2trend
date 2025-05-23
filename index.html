@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABOUT The SOMS®</title>
+    <style>
+        /* Toàn trang */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            height: 100vh;
+            overflow: hidden;
+        }
+         /* Thanh menu */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 19px 25px;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            padding-left: 460px;
+        }
+        nav ul li {
+            display: inline;
+           
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 10px 18px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            
+        }
+        nav ul li a:hover {
+            background-color: #ff7f27;
+        }
+        nav .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+        }
+        /* Video nền */
+        #background-video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+            
+            filter: brightness(50%); /* Giảm độ sáng xuống 50% */
+        }
+         /* Phần nội dung */
+        .container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: white;
+            z-index: 100;
+            
+        }
+        .container h1 {
+            font-size: 60px;
+            margin-bottom: 30px;
+        }
+        .container p {
+            font-size: 30px;
+            margin-bottom: 30px;
+        }
+        .rectangle {
+    background-color: rgba(0, 0, 0, 0.7); /* Màu nền đen với độ trong suốt */
+    padding: 70px;
+    width: 800px;
+    height: 500px;
+    text-align: center;
+    border-radius: 8px;
+    margin-left: 500px;
+    margin-top: 100px;
+}   
+* {
+    box-sizing: border-box;
+  }
+  body {
+    font-family: Arial, sans-serif;
+    background: #f9f9f9;
+  }
+  .slider-container {
+    width: 500px;
+    height: 500px;
+    margin-left: 60px;
+    margin-top: 148px;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    position: relative;
+  }
+  .slider-track {
+    display: flex;
+    width: calc(400px * 4); /* 4 ảnh, mỗi ảnh 400px rộng */
+    height: 500px;
+    animation: slide 16s linear infinite;
+  }
+  .slide {
+    flex: 0 0 400px; /* mỗi ảnh rộng 400px */
+    height: 500px;
+    position: relative;
+  }
+  .slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  @keyframes slide {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-400px); }
+    50% { transform: translateX(-800px); }
+    75% { transform: translateX(-1200px); }
+    100% { transform: translateX(0); }
+  }
+
+
+        </style>
+        </head>
+<body>
+
+    <!-- Video nền -->
+    <video id="background-video" autoplay loop muted>
+        <source src="china.webm" type="video/mp4">
+        Trình duyệt của bạn không hỗ trợ video nền.
+    </video>
+
+    <!-- Thanh menu -->
+    <nav>
+        <div class="logo">Trash2Trend®</div>
+        <ul>
+            <li><a href="https://jasonphu16098.github.io/Trash2Trend/">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    </nav>
+    <script>
+
+function toggleMenu() {
+            const nav = document.querySelector('nav');
+            nav.classList.toggle('active');
+        }
+    </script>
+     <!-- Video nền -->
+    <video id="background-video" autoplay loop muted>
+        <source src="china1.mp4" type="video/mp4">
+        Trình duyệt của bạn không hỗ trợ video nền.
+    </video>
+     <div class="container">
+        <div class="rectangle">
+             <h1>Trash2Trend®</h1>
+        <p style="text-align: justify;"><b>Trash2Trend</b> gives new life to unwanted fashion through sustainable solutions. We run influencer-led donation campaigns and offer convenient clothing collection via mobile drop-off points and on-demand home pickups, making it easy to turn old clothes into fresh impact.</p>
+
+        </div>
+    </div>
+  
+<div class="slider-container">
+  <div class="slider-track">
+    <div class="slide"><img src="img1.jpg" alt="Image 1" /></div>
+    <div class="slide"><img src="img2.jpg" alt="Image 2" /></div>
+    <div class="slide"><img src="img3.jpg" alt="Image 3" /></div>
+    <div class="slide"><img src="img4.jpg" alt="Image 4" /></div>
+  </div>
+</div>
+
+</body>
+</html>
